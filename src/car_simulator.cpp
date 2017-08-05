@@ -2,6 +2,9 @@
 #include <iostream>
 #include "physics.h"
 
+// air density
+const double air_density = 1.225;
+
 int main() {
 
   // read in car mass
@@ -11,13 +14,13 @@ int main() {
 
   // read in engine force
   std::cout << "Enter the net force of the engine (N): ";
-  double force;
-  std::cin >> force;
+  double engine_force;
+  std::cin >> engine_force;
 
   // read in drag coefficient
-  std::cout << "Enter the car's drag coefficient (m): ";
-  double drag;
-  std::cin >> drag;
+  std::cout << "Enter the car's drag area (m^2): ";
+  double drag_area;
+  std::cin >> drag_area;
 
   // read in time step
   std::cout << "Enter the simulation time step (s): ";
